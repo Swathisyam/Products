@@ -1,0 +1,16 @@
+/* table{
+    margin-left: 11%;
+    max-width: 1200px;
+    border-radius: 15px solid;
+    /* border: 5px , saddlebrown; */
+    /* padding: 35px;
+    text-align: center;
+} */ 
+table,  td 
+{   
+    /* vertical-align: top; */
+    font-weight: 600;
+    /* border-collapse: collapse; */
+    padding: 8px 6px;
+    text-align: center;
+}

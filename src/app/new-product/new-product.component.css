@@ -1,0 +1,35 @@
+form{
+    margin-left: 22%;
+    max-width: 800px;
+    border-radius: 15px solid;
+    /* border: 5px , saddlebrown; */
+    padding: 20px;
+    text-align: center;
+}
+input[type="submit"]{
+    /* margin: 0 0 15px; */
+    padding: 9px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+input[type="submit"]:hover{
+    /* background-color: salmon; */
+    transition: 0.15s;
+    cursor: pointer;
+    /* border-radius: 500px; */
+    /* border-style: dotted; */
+    background-color: seagreen;
+    /* font-size: larger; */
+    
+}
+tbody{
+    font-weight: 800;
+    font-size: 20px;
+    font-size: larger;
+}
+label{
+    font-size: 17px;
+    color: cadetblue;
+}
