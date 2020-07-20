@@ -34,10 +34,11 @@
                     <td>{{product.price}}</td>
                     <td>{{product.starRating}}</td>
                     
-                    <td><a class="action-btn" (click)='EditProduct(product._id)' routerLink="/edit" >
+                    <!-- <td><a class="action-btn"  routerLink="/edit" >
                         <i class="material-icons">edit</i>
                     </a>
-                    </td>
+                    </td> -->
+                    <td> <a class="action-btn" [routerLink]="['/edit',product._id]"><i class="material-icons">edit</i></a></td>
                     <td><a class="action-btn" (click)='RemoveProduct(product._id)'>
                         <i class="material-icons">delete</i>
                     </a>
@@ -47,7 +48,7 @@
                     <!-- <td (click) = "RemoveProduct()"><a>Delete</a></td> -->
                     <!-- <td><button (click)='RemoveProduct(product._id)'>Delete</button></td> -->
                     </tr>
-                    <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productItem.productId" > -->
+                    <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productItem.productId" >
                     <!-- <input type="hidden" name="_id1" #_id1="ngModel" [(ngModel)]="productItem.productId" > -->
                     
                 </tbody>

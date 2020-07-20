@@ -56,53 +56,75 @@ app.post('/delete', (req,res) => {
     })
 })
 
-app.post('/edit', (req,res) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
-    console.log(req.body);
-    id=req.body.id;
-    
-    ProductData.findByIdAndUpdate({_id:id}).then(function(){
-        console.log("Edited successfully product"); 
-        ProductData.find()
-        .then(function(products){
-            res.send(products);
-        });
-      })
-    })
-
-    app.post('/register',(req,res)=>{
-        let UserData = req.body;
-        console.log(req.body);
-        let user = new  userData (UserData);
-        user.save((err,regUser)=>{
-            if(err){
-                console.log(err);
-            }
-            else{
-                // let payload = {subject : user._id}
-                // let token = jwt.sign(payload,'secretKey')
-                // res.status(200).send({token})
-                res.status(200).send(regUser);
-            }
-        });
-    });
-
-
-// app.post('/register', function(req,res){
+// app.post('/edit', (req,res) => {
 //     res.header("Access-Control-Allow-Origin", "*");
 //     res.header('Access-Control-Allow-Methods:GET,POST,PATCH,PUT,DELETE,OPTIONS');
 //     console.log(req.body);
-//     var user = {
-//         email : req.body.user.email,
-//         password : req.body.user.password
-            
-//         }
+//     id=req.body.id;
     
-//     var user = new userData(user);
-//     user.save();
-//     });
+//     ProductData.findByIdAndUpdate({_id:id}).then(function(){
+//         console.log("Edited successfully product"); 
+//         ProductData.find()
+//         .then(function(products){
+//             res.send(products);
+//         });
+//       })
+//     })
 
+app.post('/edit',(req,res)=>{
+    id=req.body.ID.id;
+    console.log(id);
+        
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods: GET, POST,PUT, PATCH, DELETE, OPTIONS");
+      
+    ProductData.findOneAndUpdate({_id:id},
+        {
+        productId:req.body.product.productId,
+        productName:req.body.product.productName,
+        productCode:req.body.product.productCode,
+        price:req.body.product.price,
+        starRating:req.body.product.starRating,
+        imageUrl:req.body.product.imageUrl,     
+        releaseDate:req.body.product.releaseDate, 
+        description:req.body.product.description
+        },
+        (err,doc)=>
+        {if(err)
+            console.log(err)} )
+        
+        })
+    
+    
+app.post('/editedlist',(req,res)=>{
+    
+    console.log("editedlist")
+    id=req.body.ID.id;
+    console.log(id);
+    ProductData.findById({_id:id})
+    .then((product)=>
+    {
+        res.send(product)
+    });
+    
+    })
+
+app.post('/register',(req,res)=>{
+    let UserData = req.body;
+    console.log(req.body);
+    let user = new  userData (UserData);
+    user.save((err,regUser)=>{
+        if(err){
+            console.log(err);
+        }
+        else{
+        // let payload = {subject : user._id}
+        // let token = jwt.sign(payload,'secretKey')
+        // res.status(200).send({token})
+            res.status(200).send(regUser);
+        }
+    });
+});
 
 
 

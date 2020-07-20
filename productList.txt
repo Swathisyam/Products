@@ -1,4 +1,4 @@
-[{"_id":"5ee27c538b0bf821f23b48bc",
+[{
 "productId":1,
 "productName":"Leaf Rake",
 "productCode":"GDN-0011",
@@ -7,7 +7,7 @@
 "price":19.95,
 "starRating":3.2,
 "imageUrl":"https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"},
-{"_id":"5ee27c538b0bf821f23b48bd",
+{
 "productId":2,
 "productName":"Garden Cart",
 "productCode":"GDN-0023",
@@ -16,7 +16,7 @@
 "price":32.99,
 "starRating":4.2,
 "imageUrl":"https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"},
-{"_id":"5ee27c538b0bf821f23b48be",
+{
 "productId":5,
 "productName":"Hammer",
 "productCode":"TBX-0048",
@@ -24,7 +24,7 @@
 "description":"Curved claw steel hammer",
 "price":8.9,"starRating":4.8,
 "imageUrl":"https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"},
-{"_id":"5ee27c538b0bf821f23b48bf",
+{
 "productId":8,
 "productName":"Saw",
 "productCode":"TBX-0022",
@@ -33,7 +33,7 @@
 "price":11.55,
 "starRating":3.7,
 "imageUrl":"https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"},
-{"_id":"5ee27c538b0bf821f23b48c0",
+{
 "productId":10,
 "productName":"Video Game Controller",
 "productCode":"GMG-0042",

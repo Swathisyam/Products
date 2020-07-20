@@ -32,8 +32,12 @@ const routes: Routes = [
     component:LoginComponent
   },
   {
-    path:'edit',
+    path:'edit/:id',
+    // pathMatch:'prefix',
     component:EditProductComponent
+    // children: [
+    //   {path: 'id', component: ProductListComponent}
+  // ]
 
   }];
 

@@ -19,9 +19,22 @@ export class ProductService {
     return this.http.post("http://localhost:3000/delete",{"id":_id} )
     // .subscribe(data =>{console.log(data)})
   }
-  updatedProduct(_id:string){
-    console.log('reached here');
-    return this.http.post("http://localhost:3000/edit",{"id":_id})
+  // updatedProduct(_id:string){
+  //   console.log('reached here');
+  //   return this.http.post("http://localhost:3000/edit",{"id":_id})
+  // }
+  EditProduct(ProID,editedItem){
+
+    return this.http.post("http://localhost:3000/edit",{"product":editedItem,"ID":ProID})
+    .subscribe((data)=>{console.log(data)})
+    
+   }
+  
+  Updatedget(ID){
+    
+    console.log(ID)
+    return this.http.post("http://localhost:3000/editedList",{"ID":ID})
+    
   }
     }
 

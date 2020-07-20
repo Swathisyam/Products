@@ -48,16 +48,16 @@ export class ProductListComponent implements OnInit {
       })
     }
   }
-  EditProduct(_id){
-    if(confirm("Dou you want to continue??") == true){
-      console.log("called function edit");
-      console.log(_id);
-      this.productService.updatedProduct(_id).subscribe();
-      this.productService.newProduct(_id)
-      // .unsubscribe()
-      this.router.navigate(['/edit']);
-    }
-  }
+  // EditProduct(_id){
+  //   if(confirm("Dou you want to continue??") == true){
+  //     console.log("called function edit");
+  //     console.log(_id);
+  //     this.productService.updatedProduct(_id).subscribe();
+  //     this.productService.newProduct(_id)
+  //     // .unsubscribe()
+  //     this.router.navigate(['/edit']);
+  //   }
+  // }
   
   ngOnInit(): void {
 

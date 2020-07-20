@@ -1,6 +1,6 @@
 <div class="card">
-    <form (ngSubmit)="UpdateProduct(productItem)">
-        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productItem.productId" >
+    <form (ngSubmit)="UpdateProduct()">
+        <!-- <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="updatedItem.productId" > -->
         <div class="card-header" style="font-size: larger;">
             {{title}}
         </div>
@@ -10,35 +10,35 @@
                     <tbody>
                         <tr>
                             <td> <label> Product Id</label></td>
-                            <td><input type="text" name="p_id" [(ngModel)]="productItem.productId"></td>
+                            <td><input type="text" name="p_id" [(ngModel)]="updatedItem.productId"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Name</label></td>
-                            <td><input type="text" name="p_name" [(ngModel)]="productItem.productName"></td>
+                            <td><input type="text" name="p_name" [(ngModel)]="updatedItem.productName"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Code</label></td>
-                            <td><input type="text" name="p_code" [(ngModel)]="productItem.productCode"></td>
+                            <td><input type="text" name="p_code" [(ngModel)]="updatedItem.productCode"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Date</label></td>
-                            <td><input type="text" name="p_date" [(ngModel)]="productItem.releaseDate"></td>
+                            <td><input type="text" name="p_date" [(ngModel)]="updatedItem.releaseDate"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Description</label></td>
-                            <td><input type="text" name="p_desc" [(ngModel)]="productItem.description"></td>
+                            <td><input type="text" name="p_desc" [(ngModel)]="updatedItem.description"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Price</label></td>
-                            <td><input type="text" name="p_price" [(ngModel)]="productItem.price"></td>
+                            <td><input type="text" name="p_price" [(ngModel)]="updatedItem.price"></td>
                         </tr>
                         <tr>
                             <td> <label> Product StarRating</label></td>
-                            <td><input type="text" name="p_rating" [(ngModel)]="productItem.starRating"></td>
+                            <td><input type="text" name="p_rating" [(ngModel)]="updatedItem.starRating"></td>
                         </tr>
                         <tr>
                             <td> <label> Product Image</label></td>
-                            <td><input type="text" name="p_image" [(ngModel)]="productItem.imageUrl"></td>
+                            <td><input type="text" name="p_image" [(ngModel)]="updatedItem.imageUrl"></td>
                         </tr>
                         <tr>
                             <td></td>
